@@ -1,0 +1,4 @@
+usr/share/man/man3
+usr/lib/*/libcmark-gfm.so
+usr/lib/*/libcmark-gfm.a
+usr/lib/*/pkgconfig usr/share/pkgconfig

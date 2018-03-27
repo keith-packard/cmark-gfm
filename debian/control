@@ -1,0 +1,42 @@
+Source: cmark-gfm
+Section: text
+Priority: optional
+Maintainer: Keith Packard <keithp@keithp.com>
+Build-Depends: debhelper (>= 10), cmake, python3
+Standards-Version: 4.1.1
+
+Package: cmark-gfm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: github fork of common markdown parser cmark
+ cmark-gfm is a fork of the cmark project extending it to add support
+ for tables and other features.
+
+Package: libcmark-gfmextensions0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: github fork of common markdown parser cmark
+ cmark-gfm is a fork of the cmark project extending it to add support
+ for tables and other features.
+
+Package: libcmark-gfm0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: github fork of common markdown parser cmark
+ cmark-gfm is a fork of the cmark project extending it to add support
+ for tables and other features.
+
+Package: libcmark-gfm-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Development files for libcmark-gfm
+ cmark-gfm is a fork of the cmark project extending it to add support
+ for tables and other features.
+
+Package: libcmark-gfmextensions-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Development files for libcmark-gfmextensions
+ cmark-gfm is a fork of the cmark project extending it to add support
+ for tables and other features.
+ 
