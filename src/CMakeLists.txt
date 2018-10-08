@@ -7,8 +7,8 @@ include(GNUInstallDirs)
 set(LIBRARY "libcmark-gfm")
 set(STATICLIBRARY "libcmark-gfm_static")
 set(HEADERS
-  cmark.h
-  cmark_extension_api.h
+  cmark-gfm.h
+  cmark-gfm-extension_api.h
   parser.h
   buffer.h
   node.h
@@ -69,8 +69,8 @@ include_directories(
   ${PROJECT_BINARY_DIR}/extensions
 )
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/cmark_version.h.in
-  ${CMAKE_CURRENT_BINARY_DIR}/cmark_version.h)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/cmark-gfm_version.h.in
+  ${CMAKE_CURRENT_BINARY_DIR}/cmark-gfm_version.h)
 
 include (GenerateExportHeader)
 
@@ -78,9 +78,9 @@ add_executable(${PROGRAM} ${PROGRAM_SOURCES})
 add_compiler_export_flags()
 
 if(CMARK_SHARED)
-  target_link_libraries(${PROGRAM} libcmark-gfmextensions libcmark-gfm)
+  target_link_libraries(${PROGRAM} libcmark-gfm-extensions libcmark-gfm)
 elseif(CMARK_STATIC)
-  target_link_libraries(${PROGRAM} libcmark-gfmextensions_static libcmark-gfm_static)
+  target_link_libraries(${PROGRAM} libcmark-gfm-extensions_static libcmark-gfm_static)
 endif()
 
 # Disable the PUBLIC declarations when compiling the executable:
@@ -152,11 +152,13 @@ if (MSVC)
     APPEND PROPERTY LINK_FLAGS /INCREMENTAL:NO)
 endif(MSVC)
 
-set(CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_NO_WARNINGS ON)
+if(NOT MSVC OR CMAKE_HOST_SYSTEM_NAME STREQUAL Windows)
+  set(CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_NO_WARNINGS ON)
+  include(InstallRequiredSystemLibraries)
+endif()
 
 set(libdir lib${LIB_SUFFIX})
 
-include (InstallRequiredSystemLibraries)
 install(TARGETS ${PROGRAM} ${CMARK_INSTALL}
   EXPORT cmark-gfm
   RUNTIME DESTINATION bin
@@ -171,10 +173,10 @@ if(CMARK_SHARED OR CMARK_STATIC)
     DESTINATION ${libdir}/pkgconfig)
 
   install(FILES
-    cmark.h
-    cmark_extension_api.h
-    ${CMAKE_CURRENT_BINARY_DIR}/cmark_export.h
-    ${CMAKE_CURRENT_BINARY_DIR}/cmark_version.h
+    cmark-gfm.h
+    cmark-gfm-extension_api.h
+    ${CMAKE_CURRENT_BINARY_DIR}/cmark-gfm_export.h
+    ${CMAKE_CURRENT_BINARY_DIR}/cmark-gfm_version.h
     DESTINATION include
     )
 
