@@ -1,42 +1,56 @@
 Source: cmark-gfm
 Section: text
 Priority: optional
+Homepage: https://github.com/github/cmark
 Maintainer: Keith Packard <keithp@keithp.com>
-Build-Depends: debhelper (>= 10), cmake, python3
-Standards-Version: 4.1.1
+Build-Depends: debhelper (>= 11), cmake, python3
+Standards-Version: 4.2.1
 
 Package: cmark-gfm
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: github fork of common markdown parser cmark
- cmark-gfm is a fork of the cmark project extending it to add support
- for tables and other features.
-
-Package: libcmark-gfmextensions0
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: github fork of common markdown parser cmark
- cmark-gfm is a fork of the cmark project extending it to add support
- for tables and other features.
+Description: CommonMark parsing and rendering program, GitHub flavor
+ cmark-gfm is the GitHub flavor of the cmark C reference
+ implementation of CommonMark, a rationalized version of Markdown
+ syntax with a spec.  This package provides a command-line program
+ (cmark-gfm) for parsing and rendering CommonMark documents.
+ .
+ This GitHub flavored version has extensions for org-mode style
+ tables, auto-linking, and more.
 
 Package: libcmark-gfm0
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: github fork of common markdown parser cmark
- cmark-gfm is a fork of the cmark project extending it to add support
- for tables and other features.
+Description: CommonMark GitHub flavor gfm library
+ cmark-gfm is the GitHub flavor of the cmark C reference
+ implementation of CommonMark, a rationalized version of Markdown
+ syntax with a spec. This package provides the required gfm
+ library
 
 Package: libcmark-gfm-dev
 Architecture: any
 Depends: ${misc:Depends}
-Description: Development files for libcmark-gfm
- cmark-gfm is a fork of the cmark project extending it to add support
- for tables and other features.
+Description: CommonMark GitHub flavor gfm library dev files
+ cmark-gfm is the GitHub flavor of the cmark C reference
+ implementation of CommonMark, a rationalized version of Markdown
+ syntax with a spec. This package provides the development files for
+ the gfm library
 
-Package: libcmark-gfmextensions-dev
+Package: libcmark-gfm-extensions0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: CommonMark GitHub flavor gfm extension library
+ cmark-gfm is the GitHub flavor of the cmark C reference
+ implementation of CommonMark, a rationalized version of Markdown
+ syntax with a spec. This package provides the required gfm extension
+ library
+
+Package: libcmark-gfm-extensions-dev
 Architecture: any
 Depends: ${misc:Depends}
-Description: Development files for libcmark-gfmextensions
- cmark-gfm is a fork of the cmark project extending it to add support
- for tables and other features.
+Description: CommonMark GitHub flavor gfm extensions library dev files
+ cmark-gfm is the GitHub flavor of the cmark C reference
+ implementation of CommonMark, a rationalized version of Markdown
+ syntax with a spec. This package provides the development files for
+ the gfm extensions library
  
