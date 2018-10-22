@@ -1,3 +1,9 @@
+cmark-gfm (0.28.3.gfm.19-1) unstable; urgency=medium
+
+  * Upstream version 0.28.3.gfm.19
+
+ -- Keith Packard <keithp@keithp.com>  Mon, 22 Oct 2018 13:18:32 -0700
+
 cmark-gfm (0.28.3.gfm.17-1) unstable; urgency=medium
 
   * Initial release. (Closes: #894271)
