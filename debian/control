@@ -57,4 +57,3 @@ Description: CommonMark GitHub flavor gfm extensions library dev files
  implementation of CommonMark, a rationalized version of Markdown
  syntax with a spec. This package provides the development files for
  the gfm extensions library
- 
