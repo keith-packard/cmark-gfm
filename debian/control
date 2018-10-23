@@ -31,7 +31,7 @@ Description: CommonMark GitHub flavor gfm library
 Package: libcmark-gfm-dev
 Architecture: any
 Section: libdevel
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, libcmark-gfm0 (= ${binary:Version})
 Description: CommonMark GitHub flavor gfm library dev files
  cmark-gfm is the GitHub flavor of the cmark C reference
  implementation of CommonMark, a rationalized version of Markdown
@@ -51,7 +51,7 @@ Description: CommonMark GitHub flavor gfm extension library
 Package: libcmark-gfm-extensions-dev
 Architecture: any
 Section: libdevel
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, libcmark-gfm-extensions0 (= ${binary:Version})
 Description: CommonMark GitHub flavor gfm extensions library dev files
  cmark-gfm is the GitHub flavor of the cmark C reference
  implementation of CommonMark, a rationalized version of Markdown
