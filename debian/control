@@ -3,8 +3,8 @@ Section: text
 Priority: optional
 Homepage: https://github.com/github/cmark
 Maintainer: Keith Packard <keithp@keithp.com>
-Build-Depends: debhelper (>= 11), cmake, python3
-Standards-Version: 4.2.1
+Build-Depends: debhelper (>= 12), cmake, python3
+Standards-Version: 4.3.0
 
 Package: cmark-gfm
 Architecture: any
