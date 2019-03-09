@@ -165,9 +165,9 @@ cmark-gfm strikethrough rules
 ````````````````````````````````
 
 ```````````````````````````````` example strikethrough
-This ~text~~~~ is ~~~~curious~.
+This ~text~ ~~is~~ ~~~curious~~~.
 .
-<p>This <del>text~~~~ is ~~~~curious</del>.</p>
+<p>This <del>text</del> <del>is</del> ~~~curious~~~.</p>
 ````````````````````````````````
 
 `~` should not be escaped in href — https://github.com/github/markup/issues/311
@@ -240,4 +240,14 @@ Issue #530 - link parsing corner cases
 <p>[a](\ b)</p>
 <p><a href="%3C%3Cb">a</a></p>
 <p><a href="%3Cb">a</a></p>
+````````````````````````````````
+
+Pull request #128 - Buffer overread in tables extension
+
+```````````````````````````````` example table
+|
+-|
+.
+<p>|
+-|</p>
 ````````````````````````````````
