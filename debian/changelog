@@ -1,3 +1,9 @@
+cmark-gfm (0.28.3.gfm.20-2) unstable; urgency=medium
+
+  * Change debian/watch to monitor git tags instead of tar.gz files
+
+ -- Keith Packard <keithp@keithp.com>  Sat, 09 Mar 2019 17:00:52 +0100
+
 cmark-gfm (0.28.3.gfm.20-1) unstable; urgency=medium
 
   * Upstream version 0.28.3.gfm.20
