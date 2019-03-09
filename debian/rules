@@ -4,6 +4,11 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 DEB_HOST_MULTIARCH?=$(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
+# cmark-gfm uses many asserts which cause absolute paths
+# to be written to the object files. We'll smash the __FILE__
+# value here to avoid this
+CFLAGS += -D__FILE__='"cmark-gfm"'
+
 DEB_CMAKE_EXTRA_FLAGS=\
 	-DCMAKE_INSTALL_LIBDIR="/usr/lib/$(DEB_HOST_MULTIARCH)" \
 	-DLIB_SUFFIX="/$(DEB_HOST_MULTIARCH)"
