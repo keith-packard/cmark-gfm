@@ -21,6 +21,7 @@ Description: CommonMark parsing and rendering program, GitHub flavor
 Package: libcmark-gfm0
 Architecture: any
 Section: libs
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: CommonMark GitHub flavor gfm library
  cmark-gfm is the GitHub flavor of the cmark C reference
@@ -31,6 +32,7 @@ Description: CommonMark GitHub flavor gfm library
 Package: libcmark-gfm-dev
 Architecture: any
 Section: libdevel
+Multi-Arch: same
 Depends: ${misc:Depends}, libcmark-gfm0 (= ${binary:Version})
 Description: CommonMark GitHub flavor gfm library dev files
  cmark-gfm is the GitHub flavor of the cmark C reference
@@ -41,6 +43,7 @@ Description: CommonMark GitHub flavor gfm library dev files
 Package: libcmark-gfm-extensions0
 Architecture: any
 Section: libs
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: CommonMark GitHub flavor gfm extension library
  cmark-gfm is the GitHub flavor of the cmark C reference
@@ -51,6 +54,7 @@ Description: CommonMark GitHub flavor gfm extension library
 Package: libcmark-gfm-extensions-dev
 Architecture: any
 Section: libdevel
+Multi-Arch: same
 Depends: ${misc:Depends}, libcmark-gfm-extensions0 (= ${binary:Version})
 Description: CommonMark GitHub flavor gfm extensions library dev files
  cmark-gfm is the GitHub flavor of the cmark C reference
