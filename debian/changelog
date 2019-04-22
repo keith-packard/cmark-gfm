@@ -1,3 +1,11 @@
+cmark-gfm (0.29.0.gfm.0-1) unstable; urgency=medium
+
+  * Upstream version 0.29.0.gfm.0
+  * Change 'debian/watch' to look for upstream tags including 'gfm'
+  * Replace large file support for 32-bit builds with upstream version
+
+ -- Keith Packard <keithp@keithp.com>  Mon, 22 Apr 2019 11:26:50 -0700
+
 cmark-gfm (0.28.3.gfm.20-3) unstable; urgency=medium
 
   * Mark libraries as Multi-Arch: same
