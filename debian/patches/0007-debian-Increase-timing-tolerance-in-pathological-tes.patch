@@ -1,0 +1,34 @@
+From: Keith Packard <keithp@keithp.com>
+Date: Tue, 17 Dec 2019 13:32:42 -0800
+Subject: debian: Increase timing tolerance in pathological test by 10x (1s ->
+ 10s)
+
+sparc64 is really slow, causing this test to timeout.
+
+Signed-off-by: Keith Packard <keithp@keithp.com>
+---
+ api_test/main.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/api_test/main.c b/api_test/main.c
+index 62006ea..b5dd986 100644
+--- a/api_test/main.c
++++ b/api_test/main.c
+@@ -973,7 +973,7 @@ static void test_pathological_regressions(test_batch_runner *runner) {
+     free(html);
+     free(input);
+ 
+-    OK(runner, TIMING < 1000, "takes less than 1000ms to run");
++    OK(runner, TIMING < 10000, "takes less than 10000ms to run");
+   }
+ 
+   {
+@@ -989,7 +989,7 @@ static void test_pathological_regressions(test_batch_runner *runner) {
+     free(html);
+     free(input);
+ 
+-    OK(runner, TIMING < 1000, "takes less than 1000ms to run");
++    OK(runner, TIMING < 10000, "takes less than 10000ms to run");
+   }
+ }
+ 
