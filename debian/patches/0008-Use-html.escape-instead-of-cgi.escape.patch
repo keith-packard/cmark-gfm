@@ -1,0 +1,32 @@
+From: Keith Packard <keithp@keithp.com>
+Date: Mon, 9 Mar 2020 13:15:17 -0700
+Subject: Use html.escape instead of cgi.escape
+
+cgi.escape was deprecated in Python 3.2 and removed in Python 3.8
+
+Signed-off-by: Keith Packard <keithp@keithp.com>
+---
+ test/normalize.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/test/normalize.py b/test/normalize.py
+index 6073bf0..e9e6320 100644
+--- a/test/normalize.py
++++ b/test/normalize.py
+@@ -1,6 +1,7 @@
+ # -*- coding: utf-8 -*-
+ from html.parser import HTMLParser
+ import urllib
++import html
+ 
+ try:
+     from html.parser import HTMLParseError
+@@ -66,7 +67,7 @@ class MyHTMLParser(HTMLParser):
+                     self.output += ("=" + '"' +
+                             urllib.quote(urllib.unquote(v), safe='/') + '"')
+                 elif v != None:
+-                    self.output += ("=" + '"' + cgi.escape(v,quote=True) + '"')
++                    self.output += ("=" + '"' + html.escape(v,quote=True) + '"')
+         self.output += ">"
+         self.last_tag = tag
+         self.last = "starttag"

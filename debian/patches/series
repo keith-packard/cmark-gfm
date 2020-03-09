@@ -5,3 +5,4 @@
 0005-Fixes-Visual-C-2019-compiler-warnings-for-x64-target.patch
 0006-Fix-bug-where-tasklist-extension-was-using-union-in-.patch
 0007-debian-Increase-timing-tolerance-in-pathological-tes.patch
+0008-Use-html.escape-instead-of-cgi.escape.patch
