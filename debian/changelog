@@ -1,3 +1,9 @@
+cmark-gfm (0.29.0.gfm.0-4) unstable; urgency=medium
+
+  * Add patch to make tests compatible with Python 3.8
+
+ -- Keith Packard <keithp@keithp.com>  Mon, 09 Mar 2020 13:16:13 -0700
+
 cmark-gfm (0.29.0.gfm.0-3) unstable; urgency=medium
 
   * Add patch increasing pathological test limit to 10s for sparc64
