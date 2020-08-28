@@ -1,7 +1,7 @@
 usr/share/man/man3
 usr/lib/*/libcmark-gfm.so
 usr/lib/*/libcmark-gfm.a
-usr/lib/*/pkgconfig usr/share/pkgconfig
+usr/lib/*/pkgconfig
 usr/include/cmark-gfm_export.h
 usr/include/cmark-gfm.h
 usr/include/cmark-gfm_version.h
