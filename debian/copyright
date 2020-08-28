@@ -94,7 +94,7 @@ Files: src/buffer.h src/buffer.c src/chunk.h
 Copyright: 2012, Github, Inc.
 License: Expat
 
-Files: src/utf8.c src/utf8.c
+Files: src/utf8.c
 Copyright: 2009, Public Software Group e. V., Berlin, Germany
 License: Expat
 
