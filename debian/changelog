@@ -1,3 +1,11 @@
+cmark-gfm (0.29.0.gfm.0-5) unstable; urgency=medium
+
+  * Install header files in -dev packages. (Closes: #968709)
+  * Fix .symbols files for new upstream version.
+  * Install libcmark-gfm.pc in arch directory
+
+ -- Keith Packard <keithp@keithp.com>  Fri, 28 Aug 2020 10:24:17 -0700
+
 cmark-gfm (0.29.0.gfm.0-4) unstable; urgency=medium
 
   * Add patch to make tests compatible with Python 3.8
