@@ -1,0 +1,4 @@
+usr/lib/*/cmake/cmark-gfm.cmake
+usr/lib/*/cmake/cmark-gfm-none.cmake
+usr/lib/*/cmake-gfm-extensions/cmark-gfm-extensions.cmake
+usr/lib/*/cmake-gfm-extensions/cmark-gfm-extensions-none.cmake
