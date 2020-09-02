@@ -1,3 +1,9 @@
+cmark-gfm (0.29.0.gfm.0-6) unstable; urgency=medium
+
+  * Use <stdbool.h> directly instead of "config.h". (Closes: #969212)
+
+ -- Keith Packard <keithp@keithp.com>  Wed, 02 Sep 2020 10:25:33 -0700
+
 cmark-gfm (0.29.0.gfm.0-5) unstable; urgency=medium
 
   * Install header files in -dev packages. (Closes: #968709)
