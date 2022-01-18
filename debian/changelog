@@ -1,3 +1,11 @@
+cmark-gfm (0.29.0.gfm.2-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Fix for CVE-2020-5238. (Closes: #965984)
+  * Switch man page --safe to --unsafe. (Closes: #1003745)
+
+ -- Keith Packard <keithp@keithp.com>  Mon, 17 Jan 2022 16:43:27 -0800
+
 cmark-gfm (0.29.0.gfm.0-6) unstable; urgency=medium
 
   * Use <stdbool.h> directly instead of "config.h". (Closes: #969212)
