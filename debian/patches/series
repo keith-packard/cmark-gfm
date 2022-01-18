@@ -1,9 +1,1 @@
-0001-Fix-bug-with-determining-if-task-is-complete-adjust-.patch
-0002-Add-XML-attribute-to-tasklist-145.patch
-0003-Change-cmark_gfm_extensions_get_tasklist_state-to-cm.patch
-0004-Make-set-methods-public-add-set-method-for-tasklist-.patch
-0005-Fixes-Visual-C-2019-compiler-warnings-for-x64-target.patch
-0006-Fix-bug-where-tasklist-extension-was-using-union-in-.patch
-0007-debian-Increase-timing-tolerance-in-pathological-tes.patch
-0008-Use-html.escape-instead-of-cgi.escape.patch
-0009-Use-stdbool.h-instead-of-config.h-in-published-heade.patch
+0001-Use-stdbool.h-instead-of-config.h-in-published-heade.patch
