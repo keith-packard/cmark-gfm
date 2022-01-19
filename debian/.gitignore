@@ -1,0 +1,4 @@
+# generated files
+control
+libcmark-gfm[0-9]*.install
+libcmark-gfm-extensions[0-9]*.install

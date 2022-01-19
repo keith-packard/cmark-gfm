@@ -19,10 +19,12 @@ Description: CommonMark parsing and rendering program, GitHub flavor
  This GitHub flavored version has extensions for org-mode style
  tables, auto-linking, and more.
 
-Package: libcmark-gfm0
+Package: libcmark-gfm%DEB_VERSION_UPSTREAM%
 Architecture: any
 Section: libs
 Multi-Arch: same
+Replaces: libcmark-gfm0 (>= ${source:Upstream-Version})
+Breaks: libcmark-gfm0 (>= ${source:Upstream-Version})
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: CommonMark GitHub flavor gfm library
  cmark-gfm is the GitHub flavor of the cmark C reference
@@ -34,17 +36,19 @@ Package: libcmark-gfm-dev
 Architecture: any
 Section: libdevel
 Multi-Arch: same
-Depends: ${misc:Depends}, libcmark-gfm0 (= ${binary:Version})
+Depends: ${misc:Depends}, libcmark-gfm%DEB_VERSION_UPSTREAM% (= ${binary:Version})
 Description: CommonMark GitHub flavor gfm library dev files
  cmark-gfm is the GitHub flavor of the cmark C reference
  implementation of CommonMark, a rationalized version of Markdown
  syntax with a spec. This package provides the development files for
  the gfm library
 
-Package: libcmark-gfm-extensions0
+Package: libcmark-gfm-extensions%DEB_VERSION_UPSTREAM%
 Architecture: any
 Section: libs
 Multi-Arch: same
+Replaces: libcmark-gfm-extensions0 (>= ${source:Upstream-Version})
+Breaks: libcmark-gfm-extensions0 (>= ${source:Upstream-Version})
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: CommonMark GitHub flavor gfm extension library
  cmark-gfm is the GitHub flavor of the cmark C reference
@@ -56,7 +60,7 @@ Package: libcmark-gfm-extensions-dev
 Architecture: any
 Section: libdevel
 Multi-Arch: same
-Depends: ${misc:Depends}, libcmark-gfm-extensions0 (= ${binary:Version})
+Depends: ${misc:Depends}, libcmark-gfm-extensions%DEB_VERSION_UPSTREAM% (= ${binary:Version})
 Description: CommonMark GitHub flavor gfm extensions library dev files
  cmark-gfm is the GitHub flavor of the cmark C reference
  implementation of CommonMark, a rationalized version of Markdown

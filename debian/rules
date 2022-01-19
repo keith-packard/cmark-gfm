@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+include /usr/share/dpkg/pkg-info.mk
+
 export DEB_BUILD_MAINT_OPTIONS = reproducible=+fixfilepath hardening=+all
 
 DEB_HOST_MULTIARCH?=$(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
@@ -11,5 +13,12 @@ DEB_CMAKE_EXTRA_FLAGS=\
 %:
 	dh $@ --buildsystem=cmake
 
+clean: debian/control
+
 override_dh_auto_configure:
 	dh_auto_configure -- $(DEB_CMAKE_EXTRA_FLAGS)
+
+debian/control: debian/control-in
+	sed 's/%DEB_VERSION_UPSTREAM%/$(DEB_VERSION_UPSTREAM)/g' $< > $@
+	echo 'usr/lib/*/libcmark-gfm.so.*' > debian/libcmark-gfm$(DEB_VERSION_UPSTREAM).install
+	echo 'usr/lib/*/libcmark-gfm-extensions.so.*' > debian/libcmark-gfm-extensions$(DEB_VERSION_UPSTREAM).install
