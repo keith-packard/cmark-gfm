@@ -1,3 +1,10 @@
+cmark-gfm (0.29.0.gfm.2-2) unstable; urgency=medium
+
+  * Generate library package names from cmark-gfm upstream
+    version. (Closes: #1003964)
+
+ -- Keith Packard <keithp@keithp.com>  Wed, 19 Jan 2022 16:03:13 -0800
+
 cmark-gfm (0.29.0.gfm.2-1) unstable; urgency=medium
 
   * New upstream version.
