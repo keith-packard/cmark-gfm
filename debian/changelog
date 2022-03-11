@@ -1,3 +1,10 @@
+cmark-gfm (0.29.0.gfm.3-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Fix for CVE-2022-24724. (Closes: #1006756)
+
+ -- Keith Packard <keithp@keithp.com>  Fri, 11 Mar 2022 10:39:54 -0800
+
 cmark-gfm (0.29.0.gfm.2-2) unstable; urgency=medium
 
   * Generate library package names from cmark-gfm upstream
