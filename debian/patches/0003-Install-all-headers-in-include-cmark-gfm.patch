@@ -1,0 +1,26 @@
+From: Keith Packard <keithp@keithp.com>
+Date: Tue, 25 Oct 2022 22:49:18 -0700
+Subject: Install all headers in include/cmark-gfm
+
+These are needed to actually use the library it seems.
+
+Signed-off-by: Keith Packard <keithp@keithp.com>
+---
+ src/CMakeLists.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 84dd2a0..6a67078 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -175,6 +175,10 @@ if(CMARK_SHARED OR CMARK_STATIC)
+     DESTINATION include
+     )
+ 
++  install(FILES ${HEADERS}
++    DESTINATION include/cmark-gfm
++    )
++
+   install(EXPORT cmark-gfm DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake)
+ endif()
+ 

@@ -1,2 +1,3 @@
 0001-Use-stdbool.h-instead-of-config.h-in-published-heade.patch
 0002-man-Switch-safe-option-for-unsafe-in-man-page.patch
+0003-Install-all-headers-in-include-cmark-gfm.patch
