@@ -1,3 +1,11 @@
+cmark-gfm (0.29.0.gfm.6-2) unstable; urgency=medium
+
+  * Binary version because the library always changes package
+    names.
+  * New upstream includes fix for CVE-2022-39209. (Closes: #1020588)
+  
+ -- Keith Packard <keithp@keithp.com>  Tue, 25 Oct 2022 23:24:33 -0700
+
 cmark-gfm (0.29.0.gfm.6-1) unstable; urgency=medium
 
   * New upstream version.
