@@ -9,7 +9,7 @@ DEB_HOST_MULTIARCH?=$(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 DEB_CMAKE_EXTRA_FLAGS=\
 	-DCMAKE_INSTALL_LIBDIR="/usr/lib/$(DEB_HOST_MULTIARCH)" \
 	-DLIB_SUFFIX="/$(DEB_HOST_MULTIARCH)" \
-	-DCMAKE_BUILD_RPATH_USE_ORIGIN=ON 
+	-DCMAKE_BUILD_RPATH_USE_ORIGIN=ON
 
 %:
 	dh $@ --buildsystem=cmake
@@ -23,3 +23,11 @@ debian/control: debian/control-in
 	sed 's/%DEB_VERSION_UPSTREAM%/$(DEB_VERSION_UPSTREAM)/g' $< > $@
 	echo 'usr/lib/*/libcmark-gfm.so.*' > debian/libcmark-gfm$(DEB_VERSION_UPSTREAM).install
 	echo 'usr/lib/*/libcmark-gfm-extensions.so.*' > debian/libcmark-gfm-extensions$(DEB_VERSION_UPSTREAM).install
+
+build-indep: spec.html
+
+spec.html: build
+	*/src/cmark-gfm test/spec.txt > $@
+
+clean-indep::
+	rm -f spec.html
