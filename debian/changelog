@@ -1,3 +1,11 @@
+cmark-gfm (0.29.0.gfm.6-3) unstable; urgency=medium
+
+  * Set cmark-gfm to Multi-Arch: foriegn. (Closes: #1027152)
+  * Install config.h with libcmark-gfm-dev. (Closes: #1022183)
+  * Install spec (both .txt and .html). (Closes: #1023350)
+
+ -- Keith Packard <keithp@keithp.com>  Wed, 28 Dec 2022 13:41:28 -0800
+
 cmark-gfm (0.29.0.gfm.6-2) unstable; urgency=medium
 
   * Binary version because the library always changes package
