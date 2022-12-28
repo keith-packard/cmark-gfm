@@ -6,3 +6,4 @@ usr/include/cmark-gfm_export.h
 usr/include/cmark-gfm.h
 usr/include/cmark-gfm_version.h
 usr/include/cmark-gfm
+*/src/config.h usr/include/cmark-gfm
