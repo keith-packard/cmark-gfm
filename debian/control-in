@@ -9,6 +9,7 @@ Standards-Version: 4.6.0.1
 
 Package: cmark-gfm
 Architecture: any
+Multi-Arch: foreign
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: CommonMark parsing and rendering program, GitHub flavor
  cmark-gfm is the GitHub flavor of the cmark C reference
