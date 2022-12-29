@@ -1,3 +1,9 @@
+cmark-gfm (0.29.0.gfm.6-5) unstable; urgency=medium
+
+  * Merge in patch from NMU 0.29.0.gfm.6-2.1
+
+ -- Keith Packard <keithp@keithp.com>  Wed, 28 Dec 2022 21:38:59 -0800
+
 cmark-gfm (0.29.0.gfm.6-4) unstable; urgency=medium
 
   * Add install depend on spec.html to get that built at the right time
