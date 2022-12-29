@@ -12,6 +12,13 @@ cmark-gfm (0.29.0.gfm.6-3) unstable; urgency=medium
 
  -- Keith Packard <keithp@keithp.com>  Wed, 28 Dec 2022 13:41:28 -0800
 
+cmark-gfm (0.29.0.gfm.6-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Apply patch to fix FTBFS on s390x (Closes: #1023020)
+
+ -- Scott Talbert <swt@techie.net>  Wed, 30 Nov 2022 10:41:13 -0500
+
 cmark-gfm (0.29.0.gfm.6-2) unstable; urgency=medium
 
   * Binary version because the library always changes package
