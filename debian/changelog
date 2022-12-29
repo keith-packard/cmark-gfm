@@ -1,3 +1,9 @@
+cmark-gfm (0.29.0.gfm.6-4) unstable; urgency=medium
+
+  * Add install depend on spec.html to get that built at the right time
+
+ -- Keith Packard <keithp@keithp.com>  Wed, 28 Dec 2022 21:31:22 -0800
+
 cmark-gfm (0.29.0.gfm.6-3) unstable; urgency=medium
 
   * Set cmark-gfm to Multi-Arch: foriegn. (Closes: #1027152)
