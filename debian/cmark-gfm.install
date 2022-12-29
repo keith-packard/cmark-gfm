@@ -1,4 +1,4 @@
 usr/share/man/man1
 usr/bin
 test/spec.txt usr/share/doc/cmark-gfm
-spec.html usr/share/doc/cmark-gfm
+debian/tmp/spec.html usr/share/doc/cmark-gfm

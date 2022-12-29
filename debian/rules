@@ -24,10 +24,6 @@ debian/control: debian/control-in
 	echo 'usr/lib/*/libcmark-gfm.so.*' > debian/libcmark-gfm$(DEB_VERSION_UPSTREAM).install
 	echo 'usr/lib/*/libcmark-gfm-extensions.so.*' > debian/libcmark-gfm-extensions$(DEB_VERSION_UPSTREAM).install
 
-install:: spec.html
-
-spec.html: test/spec.txt build
-	*/src/cmark-gfm test/spec.txt > $@
-
-clean-indep::
-	rm -f spec.html
+override_dh_auto_install:
+	dh_auto_install
+	*/src/cmark-gfm test/spec.txt > debian/tmp/spec.html
