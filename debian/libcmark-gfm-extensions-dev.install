@@ -2,4 +2,3 @@ usr/lib/*/libcmark-gfm-extensions.so
 usr/lib/*/libcmark-gfm-extensions.a
 usr/include/cmark-gfm-core-extensions.h
 usr/include/cmark-gfm-extension_api.h
-usr/include/cmark-gfm-extensions_export.h
