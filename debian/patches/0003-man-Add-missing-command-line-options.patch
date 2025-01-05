@@ -1,0 +1,34 @@
+From: Keith Packard <keithp@keithp.com>
+Date: Sun, 5 Jan 2025 09:31:56 -0800
+Subject: man: Add missing command line options
+
+These options were documented in --help but missing from the man page.
+
+Signed-off-by: Keith Packard <keithp@keithp.com>
+---
+ man/man1/cmark-gfm.1 | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+diff --git a/man/man1/cmark-gfm.1 b/man/man1/cmark-gfm.1
+index 4fca627..c25791c 100644
+--- a/man/man1/cmark-gfm.1
++++ b/man/man1/cmark-gfm.1
+@@ -66,6 +66,18 @@ URLs are those that begin with `javascript:`, `vbscript:`,
+ `file:`, or `data:` (except for `image/png`, `image/gif`,
+ `image/jpeg`, or `image/webp` mime types).
+ .TP 12n
++.B \-\-github-pre-lang
++Use GitHub-style <pre lang> for code blocks.
++.TP 12n
++.B \-\-strikethrough-double-tilde
++Only parse strikethrough (if enabled) with two tildes.
++.TP 12n
++.B \-\-table-prefer-style-attributes
++Use style attributes to align table cells instead of align attributes.
++.TP 12n
++.B \-\-full-info-string
++Include remainder of code block info string in a separate attribute.
++.TP 12n
+ .B \-\-help
+ Print usage information.
+ .TP 12n
