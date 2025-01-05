@@ -7,6 +7,7 @@ import sys
 import platform
 import itertools
 import multiprocessing
+import os
 from cmark import CMark
 
 def hash_collisions():
@@ -106,7 +107,8 @@ whitespace_re = re.compile('/s+/')
 passed = 0
 errored = 0
 ignored = 0
-TIMEOUT = 5
+timing_scale = float(os.getenv("CMARK_TIMING_SCALE", "1"))
+TIMEOUT = 5 * timing_scale
 
 def run_test(inp, regex):
     parser = argparse.ArgumentParser(description='Run cmark tests.')
