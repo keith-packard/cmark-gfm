@@ -4,6 +4,11 @@ include /usr/share/dpkg/pkg-info.mk
 
 export DEB_BUILD_MAINT_OPTIONS = reproducible=+fixfilepath hardening=+all
 
+# Let timing tests run long in case we're testing on slow hardware
+# (like HPPA)
+
+export CMARK_TIMING_SCALE = 10
+
 DEB_HOST_MULTIARCH?=$(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 DEB_CMAKE_EXTRA_FLAGS=\
