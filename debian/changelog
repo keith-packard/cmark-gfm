@@ -1,3 +1,11 @@
+cmark-gfm (0.29.0.gfm.13-2) unstable; urgency=medium
+
+  * Clean up test/__pycache__. (Closes: #1043789)
+  * Add missing command line options to man page. (Closes: #1027969)
+  * Extend test timeouts to allow hppa more time.
+
+ -- Keith Packard <keithp@keithp.com>  Sun, 05 Jan 2025 09:23:04 -0800
+
 cmark-gfm (0.29.0.gfm.13-1) unstable; urgency=medium
 
   * New upstream version.
