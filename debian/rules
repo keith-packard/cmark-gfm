@@ -16,6 +16,9 @@ DEB_CMAKE_EXTRA_FLAGS=\
 
 clean: debian/control
 
+execute_after_dh_clean:
+	rm -rf test/__pycache__/
+
 override_dh_auto_configure:
 	dh_auto_configure -- $(DEB_CMAKE_EXTRA_FLAGS)
 
