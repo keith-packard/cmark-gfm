@@ -1,3 +1,9 @@
+cmark-gfm (0.29.0.gfm.13-4) unstable; urgency=medium
+
+  * Fix lintian complaints
+
+ -- Keith Packard <keithp@keithp.com>  Sun, 05 Jan 2025 17:22:56 -0800
+
 cmark-gfm (0.29.0.gfm.13-3) unstable; urgency=medium
 
   * Increase pathological_tests.py timeout to 50 seconds to help hppa
