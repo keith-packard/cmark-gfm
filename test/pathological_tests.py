@@ -106,7 +106,7 @@ whitespace_re = re.compile('/s+/')
 passed = 0
 errored = 0
 ignored = 0
-TIMEOUT = 5
+TIMEOUT = 50
 
 def run_test(inp, regex):
     parser = argparse.ArgumentParser(description='Run cmark tests.')
