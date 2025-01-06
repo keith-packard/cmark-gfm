@@ -1,0 +1,33 @@
+From: Keith Packard <keithp@keithp.com>
+Date: Sun, 5 Jan 2025 16:52:48 -0800
+Subject: test: Fix use of allowed_failures in pathological_tests.py
+
+The test needs to check if the test description is a valid key in the
+allowed_failures dictionary instead of attempting to fetch from the
+dictionary as most of the descriptions are not present in the
+dictionary leading to a missing key error at runtime.
+
+Signed-off-by: Keith Packard <keithp@keithp.com>
+---
+ test/pathological_tests.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/test/pathological_tests.py b/test/pathological_tests.py
+index 9fe1817..3986471 100644
+--- a/test/pathological_tests.py
++++ b/test/pathological_tests.py
+@@ -144,12 +144,12 @@ if __name__ == '__main__':
+             p.terminate()
+             p.join()
+             print('[TIMED OUT]')
+-            if allowed_failures[description]:
++            if description in allowed_failures:
+                 ignored += 1
+             else:
+                 errored += 1
+         elif p.exitcode != 0:
+-            if allowed_failures[description]:
++            if description in allowed_failures:
+                 ignored += 1
+             else:
+                 errored += 1

@@ -1,0 +1,24 @@
+From: Keith Packard <keithp@keithp.com>
+Date: Sun, 5 Jan 2025 16:50:14 -0800
+Subject: test: Increase pathological_tests timeout to 50 seconds
+
+hppa takes just over 5 seconds to run one of these tests.
+
+Signed-off-by: Keith Packard <keithp@keithp.com>
+---
+ test/pathological_tests.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/test/pathological_tests.py b/test/pathological_tests.py
+index d0e910c..55867ef 100644
+--- a/test/pathological_tests.py
++++ b/test/pathological_tests.py
+@@ -106,7 +106,7 @@ whitespace_re = re.compile('/s+/')
+ passed = 0
+ errored = 0
+ ignored = 0
+-TIMEOUT = 5
++TIMEOUT = 50
+ 
+ def run_test(inp, regex):
+     parser = argparse.ArgumentParser(description='Run cmark tests.')
